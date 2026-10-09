@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Natrajan's Classes | Class 1–12, All Subjects</title>
+<meta name="description" content="Coaching classes for Class 1 to 12 – all subjects, all boards. Experienced faculty, small batches, weekly tests, personal attention. Enquire now!">
+<style>
+:root{
+  --primary:#16a34a; --primary-dark:#166534; --accent:#d97706;
+  --ink:#1e293b; --muted:#64748b; --bg:#f8fafc; --white:#ffffff;
+  --radius:14px; --shadow:0 10px 30px rgba(15,23,42,.08);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Segoe UI',system-ui,-apple-system,sans-serif;color:var(--ink);background:var(--bg);line-height:1.6}
+img{max-width:100%}
+.container{width:min(1140px,92%);margin:0 auto}
+section{padding:72px 0}
+h2.section-title{font-size:clamp(1.6rem,3.5vw,2.3rem);text-align:center;color:var(--ink)}
+p.section-sub{text-align:center;color:var(--muted);max-width:640px;margin:10px auto 42px}
+.badge{display:inline-block;background:#dcfce7;color:var(--primary);font-weight:600;font-size:.8rem;padding:5px 14px;border-radius:999px;letter-spacing:.5px;text-transform:uppercase}
+
+/* NAV */
+header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.95);backdrop-filter:blur(8px);box-shadow:0 2px 12px rgba(0,0,0,.06)}
+nav{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
+.logo{display:flex;align-items:center;gap:10px;font-weight:800;font-size:1.25rem;color:var(--primary)}
+.logo-mark{width:38px;height:38px;border-radius:10px;background:linear-gradient(135deg,var(--primary),#4ade80);display:grid;place-items:center;color:#fff;font-size:1.1rem}
+.nav-links{display:flex;gap:26px;list-style:none}
+.nav-links a{text-decoration:none;color:var(--ink);font-weight:500;font-size:.95rem}
+.nav-links a:hover{color:var(--primary)}
+.btn{display:inline-block;background:var(--primary);color:#fff;padding:11px 24px;border-radius:10px;text-decoration:none;font-weight:600;border:none;cursor:pointer;font-size:.95rem;transition:.2s}
+.btn:hover{background:var(--primary-dark);transform:translateY(-2px)}
+.btn-ghost{background:#fff;color:var(--primary);border:2px solid var(--primary)}
+.btn-ghost:hover{background:var(--primary);color:#fff}
+.btn-accent{background:var(--accent)}
+.btn-accent:hover{background:#d97706}
+.hamburger{display:none;background:none;border:none;font-size:1.5rem;cursor:pointer;color:var(--ink)}
+
+/* HERO */
+.hero{background:linear-gradient(135deg,#14532d 0%,#16a34a 55%,#65a30d 100%);color:#fff;padding:96px 0 110px;position:relative;overflow:hidden}
+.hero::after{content:"";position:absolute;right:-120px;top:-120px;width:420px;height:420px;border-radius:50%;background:rgba(255,255,255,.08)}
+.hero::before{content:"";position:absolute;left:-90px;bottom:-140px;width:340px;height:340px;border-radius:50%;background:rgba(255,255,255,.06)}
+.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:50px;align-items:center;position:relative;z-index:1}
+.hero h1{font-size:clamp(2rem,4.5vw,3.1rem);line-height:1.2;margin:14px 0 16px}
+.hero h1 span{color:#fcd34d}
+.hero p{color:#dcfce7;font-size:1.05rem;max-width:520px}
+.hero-cta{display:flex;gap:14px;margin-top:28px;flex-wrap:wrap}
+.hero-stats{display:flex;gap:34px;margin-top:44px;flex-wrap:wrap}
+.stat b{display:block;font-size:1.7rem;color:#fcd34d}
+.stat span{font-size:.85rem;color:#bbf7d0}
+.hero-card{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.25);border-radius:20px;padding:34px;backdrop-filter:blur(6px)}
+.hero-card h3{margin-bottom:16px;font-size:1.2rem}
+.hero-card ul{list-style:none}
+.hero-card li{padding:9px 0;border-bottom:1px dashed rgba(255,255,255,.2);display:flex;gap:10px;align-items:center;color:#dcfce7;font-size:.95rem}
+.hero-card li:last-child{border:none}
+.tick{width:22px;height:22px;flex:none;border-radius:50%;background:#22c55e;display:grid;place-items:center;font-size:.7rem;color:#fff}
+
+/* MARQUEE */
+.marquee{background:var(--accent);color:#fff;padding:12px 0;overflow:hidden;white-space:nowrap;font-weight:600;font-size:.95rem}
+.marquee-track{display:inline-block;animation:scroll 22s linear infinite}
+@keyframes scroll{from{transform:translateX(100%)}to{transform:translateX(-100%)}}
+
+/* COURSES */
+.course-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:22px}
+.course-card{background:#fff;border-radius:var(--radius);padding:28px;box-shadow:var(--shadow);border-top:4px solid var(--primary);transition:.25s}
+.course-card:hover{transform:translateY(-6px)}
+.course-icon{width:52px;height:52px;border-radius:12px;display:grid;place-items:center;font-size:1.4rem;margin-bottom:16px;background:#dcfce7}
+.course-card h3{font-size:1.1rem;margin-bottom:8px}
+.course-card p{color:var(--muted);font-size:.92rem;margin-bottom:14px}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chip{background:#f1f5f9;border-radius:999px;padding:3px 11px;font-size:.78rem;color:var(--muted)}
+
+/* WHY */
+.why{background:#fff}
+.why-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:22px}
+.why-item{text-align:center;padding:30px 18px;border-radius:var(--radius);background:var(--bg)}
+.why-item .num{font-size:2rem;font-weight:800;color:var(--primary)}
+.why-item h4{margin:8px 0 6px}
+.why-item p{color:var(--muted);font-size:.9rem}
+
+/* RESULTS */
+.results-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:22px}
+.result-card{background:linear-gradient(135deg,#fff,#dcfce7);border-radius:var(--radius);padding:26px;box-shadow:var(--shadow);text-align:center}
+.result-card .score{font-size:2.2rem;font-weight:800;color:var(--accent)}
+.result-card h4{margin:6px 0 2px}
+.result-card p{color:var(--muted);font-size:.88rem}
+
+/* TESTIMONIALS */
+.testi-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:22px}
+.testi{background:#fff;border-radius:var(--radius);padding:26px;box-shadow:var(--shadow)}
+.testi p{font-style:italic;color:var(--ink);font-size:.95rem}
+.testi .who{margin-top:16px;display:flex;align-items:center;gap:12px}
+.avatar{width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,var(--primary),#4ade80);color:#fff;display:grid;place-items:center;font-weight:700}
+.who b{display:block;font-size:.92rem}
+.who span{font-size:.8rem;color:var(--muted)}
+.stars{color:var(--accent);margin-bottom:10px;letter-spacing:2px}
+
+/* FAQ */
+.faq{max-width:760px;margin:0 auto}
+details{background:#fff;border-radius:12px;margin-bottom:12px;box-shadow:var(--shadow);overflow:hidden}
+summary{padding:18px 22px;font-weight:600;cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center}
+summary::after{content:"+";font-size:1.4rem;color:var(--primary);transition:.2s}
+details[open] summary::after{transform:rotate(45deg)}
+details p{padding:0 22px 18px;color:var(--muted);font-size:.93rem}
+
+/* CONTACT */
+.contact-wrap{display:grid;grid-template-columns:1fr 1fr;gap:40px;background:#fff;border-radius:20px;box-shadow:var(--shadow);padding:44px}
+.contact-info h3{font-size:1.4rem;margin-bottom:14px}
+.contact-line{display:flex;gap:14px;align-items:flex-start;margin-bottom:18px;color:var(--muted)}
+.contact-line b{color:var(--ink);display:block}
+.c-icon{width:40px;height:40px;flex:none;border-radius:10px;background:#dcfce7;display:grid;place-items:center;font-size:1.1rem}
+form input,form select,form textarea{width:100%;padding:13px 15px;border:1.5px solid #e2e8f0;border-radius:10px;font-size:.95rem;font-family:inherit;margin-bottom:14px;background:#f8fafc}
+form input:focus,form select:focus,form textarea:focus{outline:none;border-color:var(--primary);background:#fff}
+form label{font-size:.85rem;font-weight:600;display:block;margin-bottom:5px}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+
+/* FOOTER */
+footer{background:#0f172a;color:#cbd5e1;padding:50px 0 24px}
+.foot-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:36px;margin-bottom:34px}
+footer h4{color:#fff;margin-bottom:14px}
+footer a{color:#cbd5e1;text-decoration:none;display:block;margin-bottom:8px;font-size:.92rem}
+footer a:hover{color:#fff}
+.copy{text-align:center;border-top:1px solid #1e293b;padding-top:20px;font-size:.85rem;color:#64748b}
+
+/* WHATSAPP FLOAT */
+.wa-float{position:fixed;bottom:22px;right:22px;width:56px;height:56px;border-radius:50%;background:#25d366;display:grid;place-items:center;box-shadow:0 6px 20px rgba(0,0,0,.25);z-index:60;text-decoration:none;transition:.2s}
+.wa-float:hover{transform:scale(1.1)}
+.wa-float svg{width:30px;height:30px;fill:#fff}
+
+@media(max-width:860px){
+  .hero-grid,.contact-wrap,.form-row{grid-template-columns:1fr}
+  .foot-grid{grid-template-columns:1fr 1fr}
+  .nav-links{display:none;position:absolute;top:66px;left:0;right:0;background:#fff;flex-direction:column;padding:18px 6%;gap:16px;box-shadow:0 12px 24px rgba(0,0,0,.1)}
+  .nav-links.open{display:flex}
+  .hamburger{display:block}
+  .nav-cta{display:none}
+  section{padding:54px 0}
+  .hero{padding:70px 0 80px}
+}
+@media(max-width:520px){.foot-grid{grid-template-columns:1fr}.hero-stats{gap:20px}}
+</style>
+<base target="_blank">
+</head>
+<body>
+
+<!-- NAV -->
+<header>
+  <nav class="container">
+    <div class="logo"><div class="logo-mark">🎓</div>Natrajan's</div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#courses">Courses</a></li>
+      <li><a href="#why">Why Us</a></li>
+      <li><a href="#results">Results</a></li>
+      <li><a href="#reviews">Reviews</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <a href="#contact" class="btn nav-cta">Enquire Now</a>
+    <button class="hamburger" id="ham" aria-label="Menu">☰</button>
+  </nav>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container hero-grid">
+    <div>
+      <span class="badge" style="background:rgba(255,255,255,.15);color:#fff">Admissions Open 2026–27</span>
+      <h1>Strong Foundation. <span>Top Scores.</span> Class 1 to 12.</h1>
+      <p>All subjects • All boards (CBSE, ICSE, State) • Small batches with personal attention, weekly tests, and regular parent updates.</p>
+      <div class="hero-cta">
+        <a href="#contact" class="btn btn-accent">Book a Free Demo Class</a>
+        <a href="#courses" class="btn btn-ghost" style="border-color:#fff;color:#fff">Explore Courses</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat"><b>15+</b><span>Years of Teaching</span></div>
+        <div class="stat"><b>2,000+</b><span>Students Taught</span></div>
+        <div class="stat"><b>95%</b><span>Board Pass Rate</span></div>
+      </div>
+    </div>
+    <div>
+      <div style="position:relative;margin-bottom:18px">
+        <img src="images/4_Every_Students_Saviour_Named_Coaching.png" alt="Students studying at BrightMinds coaching classes" style="width:100%;border-radius:20px;border:1px solid rgba(255,255,255,.35);box-shadow:0 20px 40px rgba(0,0,0,.25);display:block">
+        <div style="position:absolute;bottom:-16px;left:22px;background:#fff;color:var(--ink);border-radius:12px;padding:10px 18px;box-shadow:0 10px 25px rgba(0,0,0,.2);font-size:.85rem;font-weight:600">🏆 Trusted by 2,000+ parents</div>
+      </div>
+      <div class="hero-card">
+      <h3>📋 Why parents choose us</h3>
+      <ul>
+        <li><span class="tick">✓</span> All subjects under one roof</li>
+        <li><span class="tick">✓</span> Batch size limited to 20 students</li>
+        <li><span class="tick">✓</span> Weekly tests + monthly report cards</li>
+        <li><span class="tick">✓</span> Doubt-clearing sessions every Saturday</li>
+        <li><span class="tick">✓</span> Study material &amp; notes included</li>
+        <li><span class="tick">✓</span> Transport facility available</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<div class="marquee"><div class="marquee-track">⭐ Admissions open for 2026–27 &nbsp;•&nbsp; 🎯 Free demo classes every weekend &nbsp;•&nbsp; 📝 New batches starting soon &nbsp;•&nbsp; 🏆 38 students scored 90%+ in board exams &nbsp;•&nbsp; ⭐ Admissions open for 2026–27 &nbsp;•&nbsp; 🎯 Free demo classes every weekend &nbsp;•&nbsp; 📝 New batches starting soon &nbsp;•&nbsp; 🏆 38 students scored 90%+ in board exams &nbsp;•&nbsp;</div></div>
+
+<!-- COURSES -->
+<section id="courses">
+  <div class="container">
+    <h2 class="section-title">Courses We Offer</h2>
+    <p class="section-sub">From building strong basics in primary school to acing board exams in Class 12 — we've got every class covered.</p>
+    <div class="course-grid">
+      <div class="course-card">
+        <div class="course-icon">🧸</div>
+        <h3>Classes 1–5 (Primary)</h3>
+        <p>Strong basics in Maths, English, EVS &amp; Hindi with activity-based learning.</p>
+        <div class="chips"><span class="chip">Maths</span><span class="chip">English</span><span class="chip">EVS</span><span class="chip">Hindi</span><span class="chip">Grammar</span></div>
+      </div>
+      <div class="course-card">
+        <div class="course-icon">📐</div>
+        <h3>Classes 6–8 (Middle)</h3>
+        <p>Concept clarity in Science, Maths, Social Studies &amp; languages with regular practice.</p>
+        <div class="chips"><span class="chip">Maths</span><span class="chip">Science</span><span class="chip">SST</span><span class="chip">English</span><span class="chip">Hindi</span></div>
+      </div>
+      <div class="course-card">
+        <div class="course-icon">🎯</div>
+        <h3>Classes 9–10 (Boards)</h3>
+        <p>Focused CBSE/ICSE/State board preparation with test series and answer-writing practice.</p>
+        <div class="chips"><span class="chip">Maths</span><span class="chip">Science</span><span class="chip">SST</span><span class="chip">English</span><span class="chip">Test Series</span></div>
+      </div>
+      <div class="course-card">
+        <div class="course-icon">🔬</div>
+        <h3>Class 11–12 Science</h3>
+        <p>Physics, Chemistry, Maths &amp; Biology with board + competitive exam foundation (JEE/NEET basics).</p>
+        <div class="chips"><span class="chip">Physics</span><span class="chip">Chemistry</span><span class="chip">Maths</span><span class="chip">Biology</span><span class="chip">JEE/NEET</span></div>
+      </div>
+      <div class="course-card">
+        <div class="course-icon">💼</div>
+        <h3>Class 11–12 Commerce</h3>
+        <p>Accountancy, Business Studies, Economics &amp; Maths with case-study based teaching.</p>
+        <div class="chips"><span class="chip">Accounts</span><span class="chip">B.St.</span><span class="chip">Economics</span><span class="chip">Maths</span></div>
+      </div>
+      <div class="course-card">
+        <div class="course-icon">🌐</div>
+        <h3>Add-ons &amp; Exam Prep</h3>
+        <p>Olympiads, NTSE foundation, crash courses before exams, and spoken English classes.</p>
+        <div class="chips"><span class="chip">Olympiad</span><span class="chip">NTSE</span><span class="chip">Crash Course</span><span class="chip">Spoken English</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY US -->
+<section id="why" class="why">
+  <div class="container">
+    <h2 class="section-title">Why Natrajan's?</h2>
+    <p class="section-sub">We focus on understanding, not memorising. Here's what makes us different.</p>
+    <div class="why-grid">
+      <div class="why-item"><div class="num">👨‍🏫</div><h4>Experienced Faculty</h4><p>15+ years of teaching experience with subject-specialist teachers for every class.</p></div>
+      <div class="why-item"><div class="num">👥</div><h4>Small Batches</h4><p>Maximum 20 students per batch so every child gets individual attention.</p></div>
+      <div class="why-item"><div class="num">📝</div><h4>Weekly Tests</h4><p>Chapter-wise tests every week and full mock exams before boards.</p></div>
+      <div class="why-item"><div class="num">📊</div><h4>Parent Updates</h4><p>Monthly progress reports and a WhatsApp group for attendance &amp; marks.</p></div>
+      <div class="why-item"><div class="num">📚</div><h4>Free Study Material</h4><p>Notes, worksheets and previous-year papers included in the fees.</p></div>
+      <div class="why-item"><div class="num">❓</div><h4>Doubt Sessions</h4><p>Saturday doubt-clearing classes — no question goes unanswered.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section style="background:linear-gradient(135deg,#14532d,#16a34a);padding:64px 0">
+  <div class="container">
+    <h2 class="section-title" style="color:#fff">Life at Natrajan's📸</h2>
+    <p class="section-sub" style="color:#bbf7d0">A peek into our classrooms — focused students, dedicated teachers, and a place where learning is enjoyable.</p>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px">
+      <img src="images/1_Teacher_And_Student_At_Blackboard.png" alt="Teacher explaining concepts on the blackboard" style="width:100%;height:230px;object-fit:cover;border-radius:16px;box-shadow:0 12px 28px rgba(0,0,0,.25)">
+      <img src="images/8_8_200_Indian_Kids_In_Classroom_Stock.png" alt="Students writing a weekly test in class" style="width:100%;height:230px;object-fit:cover;border-radius:16px;box-shadow:0 12px 28px rgba(0,0,0,.25)">
+      <img src="images/3_Rural_Indian_School_Students_Study.png" alt="Students attentively studying in the classroom" style="width:100%;height:230px;object-fit:cover;border-radius:16px;box-shadow:0 12px 28px rgba(0,0,0,.25)">
+    </div>
+  </div>
+</section>
+
+<!-- RESULTS -->
+<section id="results">
+  <div class="container">
+    <h2 class="section-title">Our Results Speak</h2>
+    <p class="section-sub">We're proud of every student who walks through our doors.</p>
+    <div class="results-grid">
+      <div class="result-card"><div class="score">98%</div><h4>Aarav S. — Class 10 CBSE</h4><p>School topper, improved from 72% in Class 9.</p></div>
+      <div class="result-card"><div class="score">95.6%</div><h4>Priya M. — Class 12 Science</h4><p>Scored 99 in Chemistry, now pursuing MBBS.</p></div>
+      <div class="result-card"><div class="score">94%</div><h4>Rohan K. — Class 10 ICSE</h4><p>Perfect 100 in Maths after 1 year with us.</p></div>
+      <div class="result-card"><div class="score">⭐</div><h4>38 Students</h4><p>Scored 90%+ in board exams last year.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section id="reviews" style="background:#fff">
+  <div class="container">
+    <h2 class="section-title">What Parents &amp; Students Say</h2>
+    <p class="section-sub">Real feedback from real families.</p>
+    <div class="testi-grid">
+      <div class="testi"><div class="stars">★★★★★</div><p>"My son used to fear Maths. Now he finishes his homework on his own and scored 95 in Class 10. The weekly tests really helped."</p><div class="who"><div class="avatar">RS</div><div><b>Ritu Sharma</b><span>Parent, Class 10</span></div></div></div>
+      <div class="testi"><div class="stars">★★★★★</div><p>"The teachers explain everything from basics. Doubt sessions on Saturdays are the best part — you can ask anything."</p><div class="who"><div class="avatar">AV</div><div><b>Aditya Verma</b><span>Student, Class 12</span></div></div></div>
+      <div class="testi"><div class="stars">★★★★★</div><p>"We get monthly report cards and WhatsApp updates. As a working parent, knowing my daughter's progress without asking is wonderful."</p><div class="who"><div class="avatar">MK</div><div><b>Manoj Kumar</b><span>Parent, Class 7</span></div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+  <div class="container">
+    <h2 class="section-title">Frequently Asked Questions</h2>
+    <p class="section-sub">Have a question? You'll probably find the answer here.</p>
+    <div class="faq">
+      <details open><summary>Which boards do you cover?</summary><p>We teach all major boards — CBSE, ICSE, and State Board — with separate batches where needed so every child studies their exact syllabus.</p></details>
+      <details><summary>What are the batch timings?</summary><p>Morning batches for school-goers (7–10 AM) and evening batches (4–8 PM). Weekend batches are also available for working students. Exact timings are shared at admission.</p></details>
+      <details><summary>What are the fees?</summary><p>Fees depend on the class and subjects chosen. Primary classes start at an affordable monthly rate, with a sibling discount of 10%. Contact us on WhatsApp for the full fee structure.</p></details>
+      <details><summary>Do you provide study material?</summary><p>Yes! Printed notes, worksheets, and previous-year question papers are included in the fees — no extra charges.</p></details>
+      <details><summary>Is there a free trial class?</summary><p>Absolutely. We offer 2 free demo classes before you decide. Book one using the form below or on WhatsApp.</p></details>
+      <details><summary>How do parents track progress?</summary><p>Every month you receive a report card with test scores and teacher remarks. We also run a WhatsApp group for each batch with attendance and announcements.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" style="background:linear-gradient(135deg,#dcfce7,#f0fdf4)">
+  <div class="container">
+    <h2 class="section-title">Enquire / Book a Free Demo</h2>
+    <p class="section-sub">Fill in the form and we'll call you back within a few hours. Or reach us directly on WhatsApp.</p>
+    <div class="contact-wrap">
+      <div class="contact-info">
+        <h3>Get in Touch 📞</h3>
+        <div class="contact-line"><div class="c-icon">📍</div><div><b>Address</b>Office No 24 and 25, C-2 Building,Bramha Estate,Next to Jyoti Restaurant, Second floor Nibm-Kondhwa Junction, Pune, Maharashtra 411048<br>(Add your full address here)</div></div>
+        <div class="contact-line"><div class="c-icon">📱</div><div><b>Phone / WhatsApp</b>+91 9822501088</div></div>
+        <div class="contact-line"><div class="c-icon">✉️</div><div><b>Email</b>Natrajan's.coaching@gmail.com</div></div>
+        <div class="contact-line"><div class="c-icon">🕐</div><div><b>Timing</b>Mon–Sat: 11 AM – 8 PM<br>Sunday: Closed</div></div>
+        <a class="btn btn-accent" style="margin-top:8px" href="https://wa.me/9198XXXXXXXX?text=Hi!%20I%20want%20to%20enquire%20about%20admission." target="_blank" rel="noopener">Chat on WhatsApp</a>
+      </div>
+      <form onsubmit="handleSubmit(event)">
+        <div class="form-row">
+          <div><label for="name">Student Name *</label><input id="name" required placeholder="Full name"></div>
+          <div><label for="cls">Class *</label>
+            <select id="cls" required>
+              <option value="">Select class</option>
+              <option>Class 1</option><option>Class 2</option><option>Class 3</option><option>Class 4</option><option>Class 5</option>
+              <option>Class 6</option><option>Class 7</option><option>Class 8</option><option>Class 9</option><option>Class 10</option>
+              <option>Class 11 – Science</option><option>Class 11 – Commerce</option>
+              <option>Class 12 – Science</option><option>Class 12 – Commerce</option>
+              <option>Olympiad / Other</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-row">
+          <div><label for="phone">Parent Phone *</label><input id="phone" type="tel" required placeholder="10-digit mobile number"></div>
+          <div><label for="board">Board</label>
+            <select id="board"><option>CBSE</option><option>ICSE</option><option>State Board</option><option>Other</option></select>
+          </div>
+        </div>
+        <label for="msg">Message (optional)</label>
+        <textarea id="msg" rows="3" placeholder="Which subjects are you interested in?"></textarea>
+        <button type="submit" class="btn" style="width:100%">Send Enquiry →</button>
+        <p id="formNote" style="text-align:center;color:#16a34a;font-weight:600;margin-top:10px;display:none">✓ Thank you! We'll contact you soon.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="foot-grid">
+      <div>
+        <div class="logo" style="color:#fff;margin-bottom:12px"><div class="logo-mark">🎓</div>BrightMinds</div>
+        <p style="font-size:.9rem;max-width:320px">Quality coaching for Classes 1–12, all subjects and all boards. Building strong foundations and confident students since 2010.</p>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <a href="#courses">Courses</a><a href="#why">Why Us</a><a href="#results">Results</a><a href="#faq">FAQ</a><a href="#contact">Contact</a>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <a href="tel:+919822501088">+91 9822501088</a>
+        <a href="mailto:brightminds.coaching@gmail.com">Natrajan's.coaching@gmail.com</a>
+        <a href="#">Main Market Road</a>
+      </div>
+    </div>
+    <div class="copy">© 2026 Natrajan's Classes. All rights reserved.</div>
+  </div>
+</footer>
+
+<!-- WHATSAPP FLOAT -->
+<a class="wa-float" href="https://wa.me/9822501088text=Hi!%20I%20want%20to%20enquire%20about%20admission." target="_blank" rel="noopener" aria-label="WhatsApp">
+  <svg viewBox="0 0 32 32"><path d="M16 3C9.4 3 4 8.4 4 15c0 2.1.6 4.2 1.6 6L4 29l8.2-1.5c1.9 1 4 1.5 6.1 1.5 6.6 0 12-5.4 12-12S22.6 3 16 3zm0 21.8c-1.9 0-3.7-.5-5.3-1.5l-.4-.2-4.9.9 1-4.7-.3-.4c-1-1.6-1.6-3.5-1.6-5.4 0-5.4 4.4-9.8 9.8-9.8s9.8 4.4 9.8 9.8-4.5 10.3-10.1 10.3zm5.4-7.3c-.3-.2-1.8-.9-2-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-.9 1.2-.2.2-.4.2-.7.1-.3-.2-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.5-.6c.2-.2.2-.3.3-.6.1-.2.1-.4 0-.6-.1-.2-.7-1.7-1-2.3-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.1 1.1-1.1 2.7s1.2 3.2 1.3 3.4c.2.2 2.3 3.5 5.5 4.9.8.3 1.4.5 1.8.7.8.2 1.5.2 2.1.1.6-.1 1.8-.7 2.1-1.5.3-.7.3-1.4.2-1.5-.1-.2-.3-.3-.6-.4z"/></svg>
+</a>
+
+<script>
+// Mobile menu
+document.getElementById('ham').addEventListener('click',function(){
+  document.getElementById('navLinks').classList.toggle('open');
+});
+document.querySelectorAll('#navLinks a').forEach(a=>a.addEventListener('click',function(){
+  document.getElementById('navLinks').classList.remove('open');
+}));
+
+// Enquiry form -> opens WhatsApp with prefilled message (replace NUMBER with your number)
+function handleSubmit(e){
+  e.preventDefault();
+  var name=document.getElementById('name').value;
+  var cls=document.getElementById('cls').value;
+  var phone=document.getElementById('phone').value;
+  var board=document.getElementById('board').value;
+  var msg=document.getElementById('msg').value;
+  var text='New Enquiry%0AName: '+encodeURIComponent(name)+'%0AClass: '+encodeURIComponent(cls)+'%0APhone: '+encodeURIComponent(phone)+'%0ABoard: '+encodeURIComponent(board)+'%0AMessage: '+encodeURIComponent(msg);
+  document.getElementById('formNote').style.display='block';
+  window.open('https://wa.me/9822501088?text='+text,'_blank');
+}
+</script>
+</body>
+</html>
